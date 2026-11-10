@@ -1,5 +1,5 @@
 {
-  "name": "tanstack_start_ts",
+  "name": "vidracaria",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -10,10 +10,10 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist/client --nojekyll"
   },
   "dependencies": {
-    "@cloudflare/vite-plugin": "^1.25.5",
     "@fontsource/manrope": "^5.2.8",
     "@fontsource/sora": "^5.2.8",
     "@hookform/resolvers": "^5.2.2",
@@ -71,7 +71,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
-    "@lovable.dev/vite-tanstack-config": "^1.4.0",
     "@types/node": "^22.16.5",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
